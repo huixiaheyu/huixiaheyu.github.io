@@ -747,9 +747,8 @@ ln -s /etc/yum ~/yum
 ## 驱动安装
 
 ```bash
-sudo apt-get purge '^nvidia-.*'
-sudo apt-get autoremove
-sudo apt-get clean
+sudo apt-get purge '^nvidia-.*' -y
+sudo apt-get autoremove -y && sudo apt-get clean -y
 
 sudo ubuntu-drivers autoinstall
 ```
@@ -812,12 +811,7 @@ sudo yum makecache fast
 sudo apt update
 sudo apt upgrade
 sudo apt-get install ca-certificates curl gnupg lsb-release	# 依赖包
-curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -	# docker官方的GPG密钥
-# 密钥过期应对方法
-cd /etc/apt
-sudo cp trusted.gpg trusted.gpg.d
-
-sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"	# 添加软件源
+sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/docker.gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 7EA0A9C3F273FCD8
 ```
 
 #### 安装docker
@@ -938,3 +932,4 @@ docker logs --tail 100 qinglong  # 查看最后 100 行日志
 docker exec -it <container_name_or_id> /bin/bash
 	-it：交互模式和分配终端。
 ```
+

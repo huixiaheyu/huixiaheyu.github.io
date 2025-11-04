@@ -32,7 +32,7 @@ ssh-keygen -t rsa
 4. vscode远程连接配置认证文件
 
 ```bash
-IdentityFile ~/.ssh/id_rsa_school_servers
+IdentityFile ~/.ssh/authorized_keys
 ```
 
 ## 创建项目

@@ -8,7 +8,7 @@ permalink: /8diyk9au/
 
 ## 源
 <CardGrid>
-    <LinkCard icon="el:github" title="Github源" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" />
+    <LinkCard icon="el:github" title="Github源" href="https://gh-proxy.com/" />
     <LinkCard icon="token-branded:pip" title="PIP源" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" />
     <LinkCard icon="skill-icons:ubuntu-dark" title="Ubuntu源" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" />
     <LinkCard icon="pixel:huggingface" title="Huggingface源" href="https://hf-mirror.com" />

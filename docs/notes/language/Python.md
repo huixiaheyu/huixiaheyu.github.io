@@ -1275,7 +1275,16 @@ read_wirte()
 
 ### 格式化字符
 
-`类似C语言，不再赘述`
+### 依赖安装/编译失败
+
+1. 如果是pip错误的，直接用conda安装后再使用pip讲其他依赖更新即可
+
+```
+conda install -c conda-forge pycocotools==2.0.6
+pip install -r requirements.txt
+```
+
+
 
 ### 转义字符
 

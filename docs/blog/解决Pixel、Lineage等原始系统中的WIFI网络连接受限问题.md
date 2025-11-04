@@ -13,15 +13,19 @@ permalink: /article/43tu8yxy/
 
 使用ADB 工具，无需要root权限
 
+```
 adb shell settings delete global captive_portal_https_url
 
 adb shell settings delete global captive_portal_http_url
+```
 
 修改一下服务器的地址：
 
+```
 adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204
 
 adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204
+```
 
 然后切换一下飞行模式， 激活一下就好。这个服务地址也可以用小米或者华为的两个地址：
 
@@ -37,6 +41,6 @@ http://connectivitycheck.platform.hicloud.com/generate_204
 
 在AOSP源码中，disable captive portal service! 在AOSP目录下检索 “NetworkMonitor.java"文件
 
-找到 mlsCaptivePortalCheckEnabled=getlsCaptivePortalCheckEnabled();
+找到 `mlsCaptivePortalCheckEnabled=getlsCaptivePortalCheckEnabled();`
 
-修改为： mlsCaptivePortalCheckEnabled=false;
+修改为： `mlsCaptivePortalCheckEnabled=false;`
