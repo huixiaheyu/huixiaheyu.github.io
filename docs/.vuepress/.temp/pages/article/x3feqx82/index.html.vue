@@ -29,7 +29,7 @@
 </ul>
 </li>
 </ul>
-<img src="@source/blog/模型.assets/image-20250405172047846.png" alt="image-20250405172047846" style="zoom:80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405172047846.png" alt="image-20250405172047846" style="zoom:80%;" />
 <h4 id="模型架构" tabindex="-1"><a class="header-anchor" href="#模型架构"><span>模型架构</span></a></h4>
 <ul>
 <li>二阶段：R-CNN、Fast R-CNN、Faster-R-CNN、SPP-Net、R-FCN</li>
@@ -39,7 +39,7 @@
 <h3 id="参数介绍" tabindex="-1"><a class="header-anchor" href="#参数介绍"><span>参数介绍</span></a></h3>
 <h4 id="iou" tabindex="-1"><a class="header-anchor" href="#iou"><span>IOU</span></a></h4>
 <p><code v-pre>两个边界框(bounding box)的重叠度</code></p>
-<img src="@source/blog/模型.assets/image-20250405175924671.png" alt="image-20250405175924671" style="zoom:50%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405175924671.png" alt="image-20250405175924671" style="zoom:50%;" />
 $$
 IOU=\frac{A\cap B}{A\cup B}=\frac{S_{_{A,B}}}{S_{_A}+S_{_B}-S_{_{A,B}}}
 $$
@@ -66,7 +66,7 @@ $$
 </tr>
 </tbody>
 </table>
-<img src="@source/blog/模型.assets/image-20250405180027125.png" alt="image-20250405180027125" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405180027125.png" alt="image-20250405180027125" style="zoom:67%;" />
 <p>精度/查准率：</p>
 <p><code v-pre>预测为正例的样本中实际为正例的比例</code></p>
 <p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">precision = \frac{TP}{TP+FP}
@@ -94,7 +94,7 @@ $$
 </ul>
 </li>
 </ol>
-<img src="@source/blog/模型.assets/image-20250405190809088.png" alt="image-20250405190809088" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405190809088.png" alt="image-20250405190809088" style="zoom:67%;" />
 <ol start="3">
 <li>mAP：对多个类别的检测情况评估</li>
 </ol>
@@ -105,7 +105,7 @@ $$
 <p>时间：2013年</p>
 <p>特点：采用了一种基于 <strong>滑动窗口</strong> 和 <strong>全卷积神经网络（FCN）</strong> 的方法来实现目标的分类和定位</p>
 </blockquote>
-<img src="@source/blog/模型.assets/82e1d2d67195c77b6b755473adc2d542.png" alt="img" style="zoom:50%;" />
+<img src="@source/blog/深度学习模型.assets/82e1d2d67195c77b6b755473adc2d542.png" alt="img" style="zoom:50%;" />
 <h5 id="流程" tabindex="-1"><a class="header-anchor" href="#流程"><span>流程</span></a></h5>
 <ol>
 <li>通过FCN全卷积网络提取特征
@@ -138,7 +138,7 @@ $$
 </ol>
 <h3 id="two-stage" tabindex="-1"><a class="header-anchor" href="#two-stage"><span>Two-Stage</span></a></h3>
 <h4 id="rcnn-region-based-cnn" tabindex="-1"><a class="header-anchor" href="#rcnn-region-based-cnn"><span>RCNN（Region-based CNN）</span></a></h4>
-<img src="@source/blog/模型.assets/image-20250405203801765.png" alt="image-20250405203801765" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405203801765.png" alt="image-20250405203801765" style="zoom:67%;" />
 <h5 id="流程-1" tabindex="-1"><a class="header-anchor" href="#流程-1"><span>流程</span></a></h5>
 <ol>
 <li>生成候选区域：基于颜色、纹理等低级特征合并超像素</li>
@@ -147,7 +147,7 @@ $$
 <li>分类与回归：使用SVM分类/线性回归修正边界框</li>
 </ol>
 <h4 id="sppnet" tabindex="-1"><a class="header-anchor" href="#sppnet"><span>SPPNet</span></a></h4>
-<img src="@source/blog/模型.assets/image-20250405204318004.png" alt="image-20250405204318004" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405204318004.png" alt="image-20250405204318004" style="zoom:67%;" />
 <h5 id="流程-2" tabindex="-1"><a class="header-anchor" href="#流程-2"><span>流程</span></a></h5>
 <ol>
 <li>整图输入CNN生成特征图。</li>
@@ -156,7 +156,7 @@ $$
 <li>分类与回归：使用SVM分类/线性回归修正边界框</li>
 </ol>
 <h4 id="fast-rcnn" tabindex="-1"><a class="header-anchor" href="#fast-rcnn"><span>Fast RCNN</span></a></h4>
-<img src="@source/blog/模型.assets/image-20250405212622317.png" alt="image-20250405212622317" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250405212622317.png" alt="image-20250405212622317" style="zoom:67%;" />
 <h5 id="流程-3" tabindex="-1"><a class="header-anchor" href="#流程-3"><span>流程</span></a></h5>
 <ol>
 <li>整图输入CNN生成特征图</li>
@@ -166,8 +166,8 @@ $$
 <li>多任务损失训练分类与回归网络</li>
 </ol>
 <h4 id="faster-rcnn" tabindex="-1"><a class="header-anchor" href="#faster-rcnn"><span><mark>Faster RCNN</mark></span></a></h4>
-<img src="@source/blog/模型.assets/image-20250406141359665.png" alt="image-20250406141359665" style="zoom:67%;" />
-<img src="@source/blog/模型.assets/image-20250406141705239.png" alt="image-20250406141705239" style="zoom: 150%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406141359665.png" alt="image-20250406141359665" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406141705239.png" alt="image-20250406141705239" style="zoom: 150%;" />
 <h5 id="流程-4" tabindex="-1"><a class="header-anchor" href="#流程-4"><span>流程</span></a></h5>
 <ol>
 <li>整图输入CNN生成特征图。</li>
@@ -177,15 +177,15 @@ $$
 <li>多任务损失训练分类与回归网络</li>
 </ol>
 <h4 id="对比总结" tabindex="-1"><a class="header-anchor" href="#对比总结"><span>对比总结</span></a></h4>
-<img src="@source/blog/模型.assets/image-20250406144031898.png" alt="image-20250406144031898" style="zoom:67%;" />
-<img src="@source/blog/模型.assets/image-20250406144052203.png" alt="image-20250406144052203" style="zoom:67%;" />
-<img src="@source/blog/模型.assets/image-20250406144124733.png" alt="image-20250406144124733" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406144031898.png" alt="image-20250406144031898" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406144052203.png" alt="image-20250406144052203" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406144124733.png" alt="image-20250406144124733" style="zoom:67%;" />
 <p><strong>R-CNN网络演进：</strong></p>
-<img src="@source/blog/模型.assets/image-20250406144412151.png" alt="image-20250406144412151" style="zoom:80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406144412151.png" alt="image-20250406144412151" style="zoom:80%;" />
 <h4 id="rfcn" tabindex="-1"><a class="header-anchor" href="#rfcn"><span>RFCN</span></a></h4>
 <h3 id="one-stage" tabindex="-1"><a class="header-anchor" href="#one-stage"><span>One-Stage</span></a></h3>
 <h4 id="ssd" tabindex="-1"><a class="header-anchor" href="#ssd"><span><mark>SSD</mark></span></a></h4>
-<img src="@source/blog/模型.assets/image-20250406162020930.png" alt="image-20250406162020930" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250406162020930.png" alt="image-20250406162020930" style="zoom:67%;" />
 <h5 id="流程-5" tabindex="-1"><a class="header-anchor" href="#流程-5"><span>流程</span></a></h5>
 <ol>
 <li>整图输入基础网络（如VGG）生成多尺度特征图。</li>
@@ -194,7 +194,7 @@ $$
 </ol>
 <h4 id="yolov1" tabindex="-1"><a class="header-anchor" href="#yolov1"><span>YOLOv1</span></a></h4>
 <p><code v-pre>输入图片：448*448*3</code></p>
-<figure><img src="@source/blog/模型.assets/a29c47bca5ec4f359b54fc6d313879be.png" alt="a29c47bca5ec4f359b54fc6d313879be" tabindex="0" loading="lazy"><figcaption>a29c47bca5ec4f359b54fc6d313879be</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/a29c47bca5ec4f359b54fc6d313879be.png" alt="a29c47bca5ec4f359b54fc6d313879be" tabindex="0" loading="lazy"><figcaption>a29c47bca5ec4f359b54fc6d313879be</figcaption></figure>
 <p>每个小框预测位置信息（<code v-pre>x, y, w, h, c</code>）+  类别概率信息<code v-pre>C</code></p>
 <ul>
 <li>x：coordinate of bbox center inside cell([0;1] wrt grid cell size)</li>
@@ -208,9 +208,9 @@ $$
 <h4 id="yolov3" tabindex="-1"><a class="header-anchor" href="#yolov3"><span>YOLOv3</span></a></h4>
 <h4 id="yolov4" tabindex="-1"><a class="header-anchor" href="#yolov4"><span>YOLOv4</span></a></h4>
 <h4 id="yolov5" tabindex="-1"><a class="header-anchor" href="#yolov5"><span>YOLOv5</span></a></h4>
-<figure><img src="@source/blog/模型.assets/image-20250413193305078.png" alt="image-20250413193305078" tabindex="0" loading="lazy"><figcaption>image-20250413193305078</figcaption></figure>
-<figure><img src="@source/blog/模型.assets/image-20250413190728754.png" alt="image-20250413190728754" tabindex="0" loading="lazy"><figcaption>image-20250413190728754</figcaption></figure>
-<figure><img src="@source/blog/模型.assets/image-20250413190742275.png" alt="image-20250413190742275" tabindex="0" loading="lazy"><figcaption>image-20250413190742275</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/image-20250413193305078.png" alt="image-20250413193305078" tabindex="0" loading="lazy"><figcaption>image-20250413193305078</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/image-20250413190728754.png" alt="image-20250413190728754" tabindex="0" loading="lazy"><figcaption>image-20250413190728754</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/image-20250413190742275.png" alt="image-20250413190742275" tabindex="0" loading="lazy"><figcaption>image-20250413190742275</figcaption></figure>
 <h4 id="yolov6" tabindex="-1"><a class="header-anchor" href="#yolov6"><span>YOLOv6</span></a></h4>
 <h4 id="yolov7" tabindex="-1"><a class="header-anchor" href="#yolov7"><span>YOLOv7</span></a></h4>
 <h4 id="yolov8" tabindex="-1"><a class="header-anchor" href="#yolov8"><span>YOLOv8</span></a></h4>
@@ -288,7 +288,7 @@ $$
 <li>语言模型(policy)生成输出</li>
 <li>使用奖励模型(Environment)计算得分<span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>θ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">r\theta(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>(Reward)由<span v-pre class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>θ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">r\theta(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>使用PPO-ptx算法优化语言模型</li>
 </ol>
-<img src="@source/blog/模型.assets/image-20250418215738655.png" alt="image-20250418215738655" style="zoom: 80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250418215738655.png" alt="image-20250418215738655" style="zoom: 80%;" />
 <h4 id="llm参数" tabindex="-1"><a class="header-anchor" href="#llm参数"><span>LLM参数</span></a></h4>
 <h5 id="采样系数top-k" tabindex="-1"><a class="header-anchor" href="#采样系数top-k"><span>采样系数Top-k</span></a></h5>
 <p><code v-pre>如何预测下一个词</code></p>
@@ -296,7 +296,7 @@ $$
 <p>在某一解码时间步，固定选取前k个概率对应的词作为候选，并按照概率进行采样</p>
 <p>采样并不代表每次都会选概率最大的，只是概率越大被选中的几率越大</p>
 </blockquote>
-<img src="@source/blog/模型.assets/image-20250419143534028.png" alt="image-20250419143534028" style="zoom: 67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250419143534028.png" alt="image-20250419143534028" style="zoom: 67%;" />
 <p><strong>top-k值对解码效果影响：</strong></p>
 <ul>
 <li>k值变大：选择范围变大，输出更加多样化但精确度也会降低</li>
@@ -311,7 +311,7 @@ $$
 <p>解决了Top-k采样中只能固定选取前k个词的问题</p>
 <p>在某一解码时间步，动态选取概率之和大于p的最小集合作为候选，并按照概率进行采样</p>
 </blockquote>
-<img src="@source/blog/模型.assets/image-20250419143557550.png" alt="image-20250419143557550" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250419143557550.png" alt="image-20250419143557550" style="zoom:67%;" />
 <p><strong>给定p值时，候选词列表的大小主要由概率分布决定：</strong></p>
 <ul>
 <li>如果模型对下一个词比较确定，则候选词列表会比较小</li>
@@ -323,7 +323,7 @@ $$
 </ul>
 <h5 id="温度系数temperature" tabindex="-1"><a class="header-anchor" href="#温度系数temperature"><span>温度系数Temperature</span></a></h5>
 <p><code v-pre>控制了softmax输出分布，Temperature=1时退化为标准softmax函数</code></p>
-<figure><img src="@source/blog/模型.assets/image-20250419144841787.png" alt="image-20250419144841787" tabindex="0" loading="lazy"><figcaption>image-20250419144841787</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/image-20250419144841787.png" alt="image-20250419144841787" tabindex="0" loading="lazy"><figcaption>image-20250419144841787</figcaption></figure>
 <p><strong>Temperature对输出结果的影响：</strong></p>
 <ul>
 <li>当Temperature较低时(如0.1/0.2)：模型倾向于选择概率较高的单词，生成的文本较为连贯和准确，但可能显得过于保守，缺乏创造性和多样性</li>
@@ -362,11 +362,11 @@ $$
 <li>Word in Context：当PaLM被缩放至540B时，高于随机的效果出现</li>
 </ul>
 <p>根据文章：<code v-pre>Scaling Laws</code> for Neural Language Models</p>
-<img src="@source/blog/模型.assets/image-20250418213352077.png" alt="image-20250418213352077" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250418213352077.png" alt="image-20250418213352077" style="zoom:67%;" />
 <h5 id="基于样例提示" tabindex="-1"><a class="header-anchor" href="#基于样例提示"><span>基于样例提示</span></a></h5>
 <p>通过 few-shot prompting来执行任务的能力也是一种涌现现象</p>
 <h3 id="transformer" tabindex="-1"><a class="header-anchor" href="#transformer"><span>transformer</span></a></h3>
-<figure><img src="@source/blog/模型.assets/3319e3d6922a2e7f2499a3130d3b5925.png" alt="在这里插入图片描述" tabindex="0" loading="lazy"><figcaption>在这里插入图片描述</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/3319e3d6922a2e7f2499a3130d3b5925.png" alt="在这里插入图片描述" tabindex="0" loading="lazy"><figcaption>在这里插入图片描述</figcaption></figure>
 <ul>
 <li>BERT（Bidirectional Encoder Representations from Transformers）：双向语言理解模型，仅使用 编码器，用于理解整个句子的上下文，适合分类、问答等理解类任务。</li>
 <li>GPT（Generative Pre-trained Transformer）：自回归语言模型，仅使用 解码器，其设计目的是生成下一个词，适合用于生成式任务，如文本生成、对话等。</li>
@@ -374,23 +374,23 @@ $$
 <h3 id="多模态" tabindex="-1"><a class="header-anchor" href="#多模态"><span>多模态</span></a></h3>
 <h4 id="基本结构" tabindex="-1"><a class="header-anchor" href="#基本结构"><span>基本结构</span></a></h4>
 <h5 id="vit" tabindex="-1"><a class="header-anchor" href="#vit"><span>vit</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504143710226.png" alt="image-20250504143710226" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504143710226.png" alt="image-20250504143710226" style="zoom:67%;" />
 <h5 id="yolos" tabindex="-1"><a class="header-anchor" href="#yolos"><span>yolos</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504143729206.png" alt="image-20250504143729206" style="zoom: 80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504143729206.png" alt="image-20250504143729206" style="zoom: 80%;" />
 <h4 id="图文匹配" tabindex="-1"><a class="header-anchor" href="#图文匹配"><span>图文匹配</span></a></h4>
 <h5 id="clip" tabindex="-1"><a class="header-anchor" href="#clip"><span>clip</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504143559792.png" alt="image-20250504143559792" style="zoom:67%;" />
-<img src="@source/blog/模型.assets/image-20250504150014695.png" alt="image-20250504150014695" style="zoom:80%;" />
-<figure><img src="@source/blog/模型.assets/image-20250504150103155.png" alt="image-20250504150103155" tabindex="0" loading="lazy"><figcaption>image-20250504150103155</figcaption></figure>
+<img src="@source/blog/深度学习模型.assets/image-20250504143559792.png" alt="image-20250504143559792" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504150014695.png" alt="image-20250504150014695" style="zoom:80%;" />
+<figure><img src="@source/blog/深度学习模型.assets/image-20250504150103155.png" alt="image-20250504150103155" tabindex="0" loading="lazy"><figcaption>image-20250504150103155</figcaption></figure>
 <h5 id="bridge-tower" tabindex="-1"><a class="header-anchor" href="#bridge-tower"><span>bridge tower</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504160101916.png" alt="image-20250504160101916" style="zoom:80%;" />
-<img src="@source/blog/模型.assets/image-20250504160137868.png" alt="image-20250504160137868" style="zoom: 67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504160101916.png" alt="image-20250504160101916" style="zoom:80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504160137868.png" alt="image-20250504160137868" style="zoom: 67%;" />
 <h5 id="gpt4原理" tabindex="-1"><a class="header-anchor" href="#gpt4原理"><span>gpt4原理</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504160229505.png" alt="image-20250504160229505" style="zoom:67%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504160229505.png" alt="image-20250504160229505" style="zoom:67%;" />
 <h4 id="文生图-图生文" tabindex="-1"><a class="header-anchor" href="#文生图-图生文"><span>文生图/图生文</span></a></h4>
 <h5 id="dall-·-e" tabindex="-1"><a class="header-anchor" href="#dall-·-e"><span>DALL · E</span></a></h5>
-<img src="@source/blog/模型.assets/image-20250504154828197.png" alt="image-20250504154828197" style="zoom:80%;" />
-<img src="@source/blog/模型.assets/image-20250504154919514.png" alt="image-20250504154919514" style="zoom:80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504154828197.png" alt="image-20250504154828197" style="zoom:80%;" />
+<img src="@source/blog/深度学习模型.assets/image-20250504154919514.png" alt="image-20250504154919514" style="zoom:80%;" />
 <h4 id="扩散模型" tabindex="-1"><a class="header-anchor" href="#扩散模型"><span>扩散模型</span></a></h4>
 <h2 id="模型微调" tabindex="-1"><a class="header-anchor" href="#模型微调"><span>模型微调</span></a></h2>
 <p><code v-pre>处理不当，很可能造成模型原始能力的灾难性以往、即回导致模型原始能力丢失，对于复杂模型更是如此</code></p>
@@ -431,7 +431,7 @@ $$
 <ul>
 <li>A和B的秩远小于原始矩阵的秩，从而大大减少了需要更新的参数数量</li>
 </ul>
-<figure><img src="@source/blog/模型.assets/image-20250616215925193.png" alt="image-20250616215925193" tabindex="0" loading="lazy"><figcaption>image-20250616215925193</figcaption></figure>
+<figure><img src="@source/blog/深度学习模型.assets/image-20250616215925193.png" alt="image-20250616215925193" tabindex="0" loading="lazy"><figcaption>image-20250616215925193</figcaption></figure>
 <ul>
 <li>训练时：输入分别与原始权重和两个低秩矩阵进行计算，共同的到最终结果，优化则仅优化A和B</li>
 <li>训练完成后，可以将两个低秩矩阵与原始模型中的权重进行合并，合并后的模型与原始模型无异</li>
@@ -500,13 +500,6 @@ $$
 </ul>
 </blockquote>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code class="language-bash"><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">lmdeploy</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> serve</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> api_server</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> internlm/internlm2_5-7b-chat</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2 id="笔记" tabindex="-1"><a class="header-anchor" href="#笔记"><span>笔记</span></a></h2>
-<h3 id="如何解决高并发" tabindex="-1"><a class="header-anchor" href="#如何解决高并发"><span>如何解决高并发？</span></a></h3>
-<blockquote>
-<p>CPU串行运算能力强（计算频率高，核心数少）</p>
-<p>GPU并行运算能力强（计算频率低，核心数多(CUDA数量)）</p>
-</blockquote>
-<p>AI模型运行在gpu，天然支持高并发，类似于批次训练原理。</p>
-</div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div></template>
 
 

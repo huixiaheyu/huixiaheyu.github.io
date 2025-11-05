@@ -1084,8 +1084,13 @@
 <span class="line"><span style="--shiki-light:#393A34;--shiki-dark:#DBD7CAEE">read_wirte</span><span style="--shiki-light:#999999;--shiki-dark:#666666">()</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="其他" tabindex="-1"><a class="header-anchor" href="#其他"><span>其他</span></a></h2>
 <h3 id="格式化字符" tabindex="-1"><a class="header-anchor" href="#格式化字符"><span>格式化字符</span></a></h3>
-<p><code v-pre>类似C语言，不再赘述</code></p>
-<h3 id="转义字符" tabindex="-1"><a class="header-anchor" href="#转义字符"><span>转义字符</span></a></h3>
+<h3 id="依赖安装-编译失败" tabindex="-1"><a class="header-anchor" href="#依赖安装-编译失败"><span>依赖安装/编译失败</span></a></h3>
+<ol>
+<li>如果是pip错误的，直接用conda安装后再使用pip讲其他依赖更新即可</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code class="language-"><span class="line"><span>conda install -c conda-forge pycocotools==2.0.6</span></span>
+<span class="line"><span>pip install -r requirements.txt</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="转义字符" tabindex="-1"><a class="header-anchor" href="#转义字符"><span>转义字符</span></a></h3>
 <p><code v-pre>类似C语言，不再赘述</code></p>
 <ul>
 <li>\：可作为续行符</li>

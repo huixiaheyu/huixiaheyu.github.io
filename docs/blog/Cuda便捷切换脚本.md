@@ -1,3 +1,8 @@
+---
+title: Cuda便捷切换脚本
+createTime: 2025/08/30 16:28:42
+permalink: /article/g7qghkla/
+---
 ## 便捷切换cuda版本
 
 switch-cuda-on-version.sh

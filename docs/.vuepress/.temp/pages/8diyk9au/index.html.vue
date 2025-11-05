@@ -1,6 +1,6 @@
 <template><div><LinkCard icon="devicon:homebrew" title="Homebrew" href="https://brew.sh/" description="The Missing Package Manager for macOS (or Linux)" /><h2 id="源" tabindex="-1"><a class="header-anchor" href="#源"><span>源</span></a></h2>
 <CardGrid>
-    <LinkCard icon="el:github" title="Github源" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" />
+    <LinkCard icon="el:github" title="Github源" href="https://gh-proxy.com/" />
     <LinkCard icon="token-branded:pip" title="PIP源" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" />
     <LinkCard icon="skill-icons:ubuntu-dark" title="Ubuntu源" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" />
     <LinkCard icon="pixel:huggingface" title="Huggingface源" href="https://hf-mirror.com" />

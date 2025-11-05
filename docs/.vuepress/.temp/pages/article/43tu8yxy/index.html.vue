@@ -3,19 +3,21 @@
 <p>原因： 自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。 该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器，如若没有WiFi就会出现网络受限的情况， WiFi图标上会出现一个感叹号标志，导致系统不能访问网络了。</p>
 <p>解决方法1：</p>
 <p>使用ADB 工具，无需要root权限</p>
-<p>adb shell settings delete global captive_portal_https_url</p>
-<p>adb shell settings delete global captive_portal_http_url</p>
-<p>修改一下服务器的地址：</p>
-<p>adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204</p>
-<p>adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204</p>
-<p>然后切换一下飞行模式， 激活一下就好。这个服务地址也可以用小米或者华为的两个地址：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code class="language-"><span class="line"><span>adb shell settings delete global captive_portal_https_url</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>adb shell settings delete global captive_portal_http_url</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>修改一下服务器的地址：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code class="language-"><span class="line"><span>adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后切换一下飞行模式， 激活一下就好。这个服务地址也可以用小米或者华为的两个地址：</p>
 <p>http://connect.rom.miui.com/generate_204</p>
 <p>or</p>
 <p>http://connectivitycheck.platform.hicloud.com/generate_204</p>
 <p>解决办法2，其实也就是1的延伸而已：</p>
 <p>在AOSP源码中，disable captive portal service! 在AOSP目录下检索 “NetworkMonitor.java&quot;文件</p>
-<p>找到 mlsCaptivePortalCheckEnabled=getlsCaptivePortalCheckEnabled();</p>
-<p>修改为： mlsCaptivePortalCheckEnabled=false;</p>
+<p>找到 <code v-pre>mlsCaptivePortalCheckEnabled=getlsCaptivePortalCheckEnabled();</code></p>
+<p>修改为： <code v-pre>mlsCaptivePortalCheckEnabled=false;</code></p>
 </div></template>
 
 
