@@ -148,6 +148,8 @@ Raw：https://github.moeyy.xyz/https://raw.githubusercontent.com/moeyy/project/a
 ```py
 import os
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+
+export HF_ENDPOINT="https://hf-mirror.com"
 ```
 
 ### Setuptools更改源
