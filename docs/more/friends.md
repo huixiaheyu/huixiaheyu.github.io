@@ -14,5 +14,5 @@ list:
     name: 小冰
     link: https://shangjhih.github.io
     avatar: https://github.com/shangjhih.png
-    desc: A university student from China
+    desc: 该博客在作者读大学本科期间创建，通过Hexo搭建，部署于Github Action。博客建立之初是为了防止作者遗忘已经学过的东西，将一些可以被记录的东西写下来一定程度上会减少遗忘。
 ---
