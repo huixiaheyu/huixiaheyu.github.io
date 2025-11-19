@@ -13,8 +13,6 @@ permalink: /8diyk9au/
     <LinkCard icon="skill-icons:ubuntu-dark" title="Ubuntu源" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" />
     <LinkCard icon="pixel:huggingface" title="Huggingface源" href="https://hf-mirror.com" />
     <LinkCard icon="streamline-flex-color:vpn-connection-flat" title="网络加速-gg" href="https://github.com/mzz2017/gg" />
-    <LinkCard icon="streamline-flex-color:vpn-connection-flat" title="网络加速-clash-for-linux" href="https://github.com/wnlen/clash-for-linux.git" />
-    <LinkCard icon="streamline-flex-color:vpn-connection-flat" title="网络加速-clash-for-linux-install" href="https://github.com/nelvko/clash-for-linux-install" />
 </CardGrid>
 
 ## Ai模型
