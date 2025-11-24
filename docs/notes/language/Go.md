@@ -52,5 +52,6 @@ func main() {
 	fmt.Printf("Gb = %T\n", Gb)
 }
 
+hello
 ```
 
