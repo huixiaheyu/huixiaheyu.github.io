@@ -26,7 +26,9 @@ ssh-keygen -t rsa
 服务器：
 - 将公钥(.pub)传入服务器放入以下路径：~/.ssh/authorized_keys
 
-便捷代码：echo "xxxx" >> ~/.ssh/authorized_keys
+便捷代码：
+sftp username@ip
+put .ssh/id_ed25519.pub .ssh/authorized_keys
 ```
 
 4. vscode远程连接配置认证文件

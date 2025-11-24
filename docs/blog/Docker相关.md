@@ -95,9 +95,11 @@ mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
     "registry-mirrors": [
-        "https://docker.1panel.live",
-        "https://k-docker.asia",
         "https://docker.1ms.run"
+        "https://docker.1panel.live",
+        "https://0dj0t5fb.mirror.aliyuncs.com",
+        "https://registry.docker-cn.com"
+        "https://k-docker.asia",
     ]
 }
 EOF
@@ -160,5 +162,31 @@ docker logs --tail 100 qinglong  # 查看最后 100 行日志
 # 在运行中的容器内执行命令
 docker exec -it <container_name_or_id> /bin/bash
 	-it：交互模式和分配终端。
+```
+
+
+
+
+
+```
+docker run \
+	--name="corex_4.3.6_v10" \
+	--ulimit memlock=-1:-1 -itd \
+	--privileged \
+	--cap-add=ALL \
+	--network=host \
+	--ipc=host \
+	--pid=host \
+	-v /dev:/dev \
+	-v /lib/modules:/lib/modules \
+	-v /usr/src:/usr/src \
+	-v /home/:/home \
+	-v /root:/root \
+	-v /mnt/sdb:/mnt/sdb
+	crpi-92uj7jb20gffz04j.cn-guangzhou.personal.cr.aliyuncs.com/iluvatar_common/vllm0.10.1-4.3.6-aarch64:v1 \
+	/bin/bash
+	
+	
+docker run --name="corex_4.3.6_v10" --ulimit memlock=-1:-1 -itd --privileged --cap-add=ALL --network=host --ipc=host --pid=host -v /dev:/dev -v /lib/modules:/lib/modules -v /usr/src:/usr/src -v /home/:/home -v /root:/root -v /mnt/sdb:/mnt/sdb -e LD_LIBRARY_PATH="$COREX_LIB_PATH:\$LD_LIBRARY_PATH" -e ANOTHER_VAR="another_value" crpi-92uj7jb20gffz04j.cn-guangzhou.personal.cr.aliyuncs.com/iluvatar_common/vllm0.10.1-4.3.6-aarch64:v1 /bin/bash
 ```
 
