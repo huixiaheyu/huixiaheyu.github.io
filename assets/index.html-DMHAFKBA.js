@@ -1,0 +1,31 @@
+import{a,c as n,b as e,o as i}from"./app-BmMEgCC3.js";const l={};function t(p,s){return i(),n("div",null,[...s[0]||(s[0]=[e(`<h2 id="定时任务" tabindex="-1"><a class="header-anchor" href="#定时任务"><span>定时任务</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span># 查看所有用户定时任务</span></span>
+<span class="line"><span>sudo cat /etc/passwd | cut -d: -f1 | while read user; do</span></span>
+<span class="line"><span>    echo &quot;=== Crontab for user: $user ===&quot;</span></span>
+<span class="line"><span>    sudo crontab -u &quot;$user&quot; -l 2&gt;/dev/null</span></span>
+<span class="line"><span>    echo</span></span>
+<span class="line"><span>done</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 清除 username 用户的定时任务</span></span>
+<span class="line"><span>sudo crontab -r -u username</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 移除所有限制属性（i: immutable, a: append-only）</span></span>
+<span class="line"><span>sudo chattr -a -i /etc/cron.hourly/rqcyi</span></span>
+<span class="line"><span>sudo chattr -a -i /etc/cron.daily/byxnyhza</span></span>
+<span class="line"><span>sudo chattr -a -i /etc/cron.hourly/byxnyhza</span></span>
+<span class="line"><span>sudo chattr -a -i /etc/cron.daily/rqcyi</span></span>
+<span class="line"><span># 删除恶意定时脚本</span></span>
+<span class="line"><span>sudo rm -f /etc/cron.hourly/rqcyi</span></span>
+<span class="line"><span>sudo rm -f /etc/cron.daily/byxnyhza</span></span>
+<span class="line"><span>sudo rm -f /etc/cron.hourly/byxnyhza</span></span>
+<span class="line"><span>sudo rm -f /etc/cron.daily/rqcyi</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="恶意文件" tabindex="-1"><a class="header-anchor" href="#恶意文件"><span>恶意文件</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span># 删除其他恶意文件</span></span>
+<span class="line"><span>sudo rm -rf /tmp/.bash /tmp/.py</span></span>
+<span class="line"><span>sudo rm -f /usr/bin/x86_64</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>sudo rm -f /tmp/.snap-private-bash</span></span>
+<span class="line"><span>sudo rm -rf /usr/bin/-bash</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="ssh防篡改" tabindex="-1"><a class="header-anchor" href="#ssh防篡改"><span>ssh防篡改</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code class="language-"><span class="line"><span># 计算ssh的哈希值进行比对</span></span>
+<span class="line"><span>sudo md5sum /usr/sbin/sshd</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 重新安装 SSH 服务</span></span>
+<span class="line"><span>sudo apt-get install --reinstall openssh-server</span></span>
+<span class="line"><span>sudo systemctl restart ssh</span></span>
+<span class="line"><span>sudo systemctl status ssh</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,6)])])}const d=a(l,[["render",t]]),c=JSON.parse('{"path":"/article/6azuiqmv/","title":"服务器排查挖矿","lang":"zh-CN","frontmatter":{"title":"服务器排查挖矿","createTime":"2025/09/03 19:00:55","permalink":"/article/6azuiqmv/","description":"定时任务 恶意文件 ssh防篡改","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"服务器排查挖矿\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2025-11-16T08:06:54.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://huixiaheyu.github.io/article/6azuiqmv/"}],["meta",{"property":"og:site_name","content":"HXHY"}],["meta",{"property":"og:title","content":"服务器排查挖矿"}],["meta",{"property":"og:description","content":"定时任务 恶意文件 ssh防篡改"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2025-11-16T08:06:54.000Z"}],["meta",{"property":"article:modified_time","content":"2025-11-16T08:06:54.000Z"}]]},"readingTime":{"minutes":0.66,"words":197},"git":{"createdTime":1762219494000,"updatedTime":1763280414000,"contributors":[{"name":"HuiXiaHeYu","username":"HuiXiaHeYu","email":"jizhilieshou@gmail.com","commits":3,"avatar":"https://avatars.githubusercontent.com/HuiXiaHeYu?v=4","url":"https://github.com/HuiXiaHeYu"}]},"autoDesc":true,"filePathRelative":"blog/服务器排查挖矿.md","headers":[],"categoryList":[{"id":"126ac9","sort":10001,"name":"blog"}],"bulletin":true}');export{d as comp,c as data};
