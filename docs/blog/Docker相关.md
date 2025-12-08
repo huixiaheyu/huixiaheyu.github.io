@@ -95,11 +95,11 @@ mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
     "registry-mirrors": [
-        "https://docker.1ms.run"
+        "https://docker.1ms.run",
         "https://docker.1panel.live",
         "https://0dj0t5fb.mirror.aliyuncs.com",
-        "https://registry.docker-cn.com"
-        "https://k-docker.asia",
+        "https://registry.docker-cn.com",
+        "https://k-docker.asia"
     ]
 }
 EOF
