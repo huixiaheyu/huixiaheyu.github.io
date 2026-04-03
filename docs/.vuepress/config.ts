@@ -184,7 +184,7 @@ export default defineUserConfig({
     encrypt: {
       rules: {
         // 可以是 文件夹的路径，对该目录下所有文章加密
-        '/notes/read/': '654321',
+        // '/notes/read/': '654321',
         // 可以是 md 文件的相对路径，对该文件加密
         'notes/others/小妙招.md': '20021206a',
       }
